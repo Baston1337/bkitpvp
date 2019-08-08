@@ -7,16 +7,18 @@ public class Main extends JavaPlugin {
 
     private static MySQL mySQL;
 
-    @Override
-    public void onEnable() {
-        setMySQL(new MySQL("testes","localhost","3306","","root"));
-    }
-
     public static MySQL getMySQL() {
         return mySQL;
     }
 
     public static void setMySQL(MySQL mySQL) {
         Main.mySQL = mySQL;
+    }
+
+    @Override
+    public void onEnable() {
+        setMySQL(new MySQL(getConfig().getString("storage.mysql.database"), getConfig().getString("storage.mysql.host"),
+                getConfig().getString("storage.mysql.port"), getConfig().getString("storage.mysql.pass"),
+                getConfig().getString("storage.mysql.user")));
     }
 }
