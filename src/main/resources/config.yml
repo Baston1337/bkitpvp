@@ -1,3 +1,6 @@
+# thanks everyone for using the plugin!
+# website: https://baston1337.me
+
 # where player data will be saved
 storage:
   type: 'mysql' # mysql or yml
@@ -7,3 +10,10 @@ storage:
     user: 'root'
     pass: ''
     database: 'bkitpvp'
+
+
+# all editable messages
+msg:
+  build:
+    permission: '&cYou are not allowed for this.'
+    console: '&cYou need to be a player for this. '

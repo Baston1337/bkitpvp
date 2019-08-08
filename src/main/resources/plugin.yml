@@ -4,3 +4,8 @@ version: 1.0
 
 author: Baston1337
 website: https://baston1337.me
+
+commands:
+  build:
+    permission: bkitpvp.build
+    description: 'Used to enable build mode.'
